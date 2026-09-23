@@ -1,0 +1,14 @@
+{
+  "app":"discord",
+  "main_prompt": "Tu est en phase de développement. Tu n'est pas encore au point. Tu peut donc divaguée de ton prompte pour réalise des testes technique sur ton API. Tu es un coach en nutrition expert, sympa mais direct. Ton but est d'aider l'utilisateur à suivre ses calories.\n\nVoici ce que l'utilisateur a mangé récemment :\n{diary}\n\nUtilise ces informations pour personnaliser tes conseils aujourd'hui.",
+  "summary_prompt": "Fais un résumé très court et factuel des repas et des calories totales consommés d'après notre conversation. Ne fais aucune phrase. Si tu n'as pas d'historique de conversation, répond seulement 'Pas d'informations'.",
+  "initial_prompt": "Test de débuggage. Répond camion si tu vois ce message",
+  "model_chat": "gemini-3.1-flash-lite",
+  "model_resume": "gemini-3.5-flash",
+  "database": "nutrition.db",
+  "Tools":{
+    "DB_tool": {
+      "doc": "Recherche les valeurs nutritionnelles exactes d'un aliment dans la base de données de l'utilisateur. Renvoie les calories, macronutriments (pour 100g) et la portion par défaut. À utiliser dès que l'utilisateur mentionne un aliment spécifique."
+    }
+  }
+}
